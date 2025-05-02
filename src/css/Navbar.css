@@ -1,0 +1,31 @@
+.nav-container {
+    background-color: #e8d6bd;
+    padding: 2rem;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.a-container {
+    background-color: #e8d6bd;
+    width: 50%;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.a-container a {
+    text-decoration: none;
+    color: black;
+    background-color: #b63923;
+    font-weight: bold;
+    border-style:solid;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.logo-nav {
+    width: 100px;
+    height: auto;
+}
