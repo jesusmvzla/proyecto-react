@@ -5,20 +5,8 @@ import facemask from "../assets/img/facemask-airsoft.png"
 import googlesEvike from "../assets/img/googles-airsoft.png";
 
 
-const products = [
+export const products = [
     {
-        id: "01",
-        name: "Reserva campo 170 - 1 hora",
-        price: 35000,
-        description: "Reserva de una hora en nuestro campo techado en la calle 170. Si no tienes tu equipamiento, la reserva incluye réplica, protección de torso y cara, cargador con 450 bbs.",
-        stock: 12,
-        stockType:"horas",
-        img: camp170,
-        category: "campo170",
-        action: "Reservar"
-    },
-    {
-        id: "02",
         name: "Reserva campo 170 - 2 horas",
         price: 60000,
         description: "Reserva de dos horas en nuestro campo techado en la calle 170. Si no tienes tu equipamiento, la reserva incluye réplica, protección de torso y cara, cargador con 450 bbs.",
@@ -29,7 +17,6 @@ const products = [
         action: "Reservar"
     },
     {
-        id: "03",
         name: "Reserva campo Chía - 1 hora",
         price: 35000,
         description: "Reserva de una hora en nuestro campo abierto ubicado en Chía. Si no tienes tu equipamiento, la reserva incluye réplica, protección de torso y cara, cargador con 450 bbs.",
@@ -40,7 +27,6 @@ const products = [
         action: "Reservar"
     },
     {
-        id: "04",
         name: "Reserva campo Chía - 2 horas",
         price: 60000,
         description: "Reserva de dos horas en nuestro campo abierto ubicado en Chía. Si no tienes tu equipamiento, la reserva incluye réplica, protección de torso y cara, cargador con 450 bbs.",
@@ -51,7 +37,6 @@ const products = [
         action: "Reservar"
     },
     {
-        id: "05",
         name: "Bolsa de BBs - 4.000 - 0.25",
         price: 60000,
         description: "BBs Swiss Arms 0.25g de alta precisión, calibre 6 mm, ideales para réplicas de airsoft AEG y GBB, con empaque de 1 kg (aprox. 4.000 unidades) y excelente rendimiento en combate simulado.",
@@ -62,7 +47,6 @@ const products = [
         action: "Comprar"
     },
     {
-        id: "06",
         name: "Malla facial - airsoft",
         price: 75000,
         description: "Máscara de malla facial para airsoft con protección metálica y ajuste lateral, diseñada para ofrecer máxima ventilación y resistencia a impactos en zonas críticas del rostro.",
@@ -74,7 +58,6 @@ const products = [
 
     },
     {
-        id: "07",
         name: "Gafas de grado 5 protección ocular",
         price: 130000,
         description: "Gafas tácticas de protección ocular grado 5, con lente resistente a impactos, marco flexible y correa ajustable, ideales para airsoft y entornos de alta exigencia.",
@@ -83,7 +66,6 @@ const products = [
         img: googlesEvike,
         category: "productos",
         action: "Comprar"
-
     }
 ]
 let error = false

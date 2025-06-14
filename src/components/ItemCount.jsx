@@ -1,10 +1,11 @@
 // Imports fuera del componente
 import { useState } from 'react'
 
-const ItemCount = ({ stock }) => {
+const ItemCount = ({ stock, onAdd }) => {
     // Hacemos la lógica, funciones, hook fuera del return o fuera de una función
     // El hook siempre se declara de la siguiente forma
     // En el indice cero la variable, en el índice 1 la función modificadora
+
     const [count, setCount] = useState(1)
 
     const restar = () => {
@@ -26,7 +27,7 @@ const ItemCount = ({ stock }) => {
                 <span className='btn'>{count}</span>
                 <button className='btn btn-success' onClick={sumar}>+</button>
             </div>
-            <button className='btn btn-primary'>Agregar al carrito</button>
+            <button className='btn btn-primary' onClick={()=>onAdd(count)}>Agregar al carrito</button>
         </div>
     )
 }

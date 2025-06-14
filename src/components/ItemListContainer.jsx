@@ -1,36 +1,53 @@
 import { useEffect, useState } from "react";
-import { getProducts } from "../mock/AsyncService";
+import { getProducts, products  } from "../mock/AsyncService";
 import ItemList from "../components/ItemList";
 import { useParams } from "react-router-dom";
+import LoaderComponent from "../components/LoaderComponent"
+import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../service/firebase";
 
 const ItemListContainer = (props) => {
 
     const [data, setData] = useState([]);
-    const {categoryId}= useParams()
+    const { categoryId } = useParams()
+    const [loading, setLoading] = useState(false)
+
+
+    //FIREBASE
 
     useEffect(() => {
-        // Ejecutar mi función de promesa, tratarla con el then
-        getProducts()
-            .then((response) => {
-                if (categoryId) {
-                    //filtrar
-                    setData(response.filter((prod)=> prod.category === categoryId))
-                } else {
-                    //no filtro
-                    setData(response)
-                }
-
+        setLoading(true)
+        //conectarnos con nuestra colección
+        const camposCollection = categoryId ? query(collection(db, "campos"), where("category", "==", categoryId)) : collection(db, "campos")
+        //pedir los datos / documentos
+        getDocs(camposCollection)
+            .then((res) => {
+                //Limpiar los datos para poder utilizar
+                const list = res.docs.map((doc)=> {
+                    return {
+                        ...doc.data(),
+                        id:doc.id
+                    }
+                })
+                setData(list)
             })
-            .catch((error) => console.error(error))
+            .catch((error) => console.log(error))
+            .finally(() => setLoading(false))
     }, [categoryId])
 
     const { greeting } = props;
 
     return (
-        <div>
-            <h1>{greeting}{categoryId && <span style={{textTransform: "capitalize"}}> {categoryId}</span>}</h1>
-            <ItemList data={data}/>
-        </div>
+        <>
+            {
+                loading
+                    ? <LoaderComponent />
+                    : <div>
+                        <h1>{greeting}{categoryId && <span style={{ textTransform: "capitalize" }}> {categoryId}</span>}</h1>
+                        <ItemList data={data} />
+                    </div>
+            }
+        </>
     )
 }
 
