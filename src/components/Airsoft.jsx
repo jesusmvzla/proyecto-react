@@ -4,7 +4,6 @@ import "../css/app.css"
 const Airsoft = () => {
     return (
         <>
-        <div className='redBar'></div>
         <div className='Airsoft'>
             <h2>¿Qué es el Airsoft?</h2>
             <br />

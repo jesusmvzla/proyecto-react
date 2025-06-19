@@ -29,8 +29,6 @@ Este proyecto fue desarrollado como parte de la cursada en **Coderhouse** para l
 ## Instalación y uso
 
 1. **Clona el repositorio**
-git clone https://github.com/jesusmvzla/proyecto-react.git
-cd proyecto-react
 
 2. **Instala las dependencias**
 
