@@ -28,7 +28,7 @@ const onAdd = (cantidad) => {
             <br></br>
             {compra 
             ? <div style={{width:"80%", display:"flex", justifyContent:"space-between", alignItems:"center"}}>
-                <Link to="/" className='btn btn-dark'>Seguir comprando</Link>
+                <Link to="/" className='btn btn-dark botoncount'>Seguir comprando</Link>
                 <Link to="/cart" className='btn btn-dark'>Ir al carrito</Link>
             </div>
             : <ItemCount stock={detalle.stock} onAdd={onAdd}/>}

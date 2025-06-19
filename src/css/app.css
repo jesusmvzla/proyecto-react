@@ -126,3 +126,15 @@ margin: 5px;
   background-color: #1a0000;
   height: 10px;
 }
+
+.botonAñadirCarrito {
+  background-color: brown;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  color: white;
+}
+
+.botonesCarrito {
+  margin: 1rem;
+}
