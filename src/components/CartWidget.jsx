@@ -5,15 +5,14 @@ import { CartContext } from '../context/CartContext';
 
 const CartWidget = () => {
 
-    const {cartQuantity} = useContext(CartContext)
-
+    const { cartQuantity } = useContext(CartContext)
 
     return (
-<div className="carrito-div">
-    <span className="carrito-icon"></span>
-    <BsFillCartFill fontSize={"1.3rem"} />
-    <span>{cartQuantity()}</span>
-</div>
+        <div className="carrito-div">
+            <span className="carrito-icon"></span>
+            <BsFillCartFill fontSize={"1.3rem"} />
+            <span>{cartQuantity()}</span>
+        </div>
     )
 }
 

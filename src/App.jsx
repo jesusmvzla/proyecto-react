@@ -8,13 +8,15 @@ import Error from './components/Error'
 import Nosotros from './components/Nosotros'
 import Airsoft from './components/Airsoft'
 import Cart from './components/Cart'
-import Checkout from './components/Checkout'
-//Importar el proveedor
+// import Checkout from './components/Checkout'
 import { CartProvider } from './context/CartContext'
+import CheckoutUseForm from './components/CheckoutUseForm'
+import { Toaster, toast } from 'react-hot-toast'
 
 function App() {
 
   return (
+    <>
     <BrowserRouter>
       <CartProvider>
       <NavbarBootstrap />
@@ -25,12 +27,13 @@ function App() {
         <Route path='/nosotros' element={<Nosotros/>}/>
         <Route path='/airsoft' element={<Airsoft/>}/>
         <Route path='/cart' element={<Cart/>}/>
-        <Route path='/checkout' element={<Checkout/>}/>
+        <Route path='/checkout' element={<CheckoutUseForm/>}/>
         <Route path='*' element={<Error/>}/>
       </Routes>
       </CartProvider>
-
     </BrowserRouter>
+    <Toaster position="top-right" />
+    </>
   )
 }
 

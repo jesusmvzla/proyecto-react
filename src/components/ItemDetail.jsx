@@ -2,6 +2,7 @@ import React, {useContext, useState} from 'react'
 import ItemCount from './ItemCount'
 import { CartContext } from '../context/CartContext'
 import { Link } from 'react-router-dom'
+import toast, { Toaster } from 'react-hot-toast'
 
 const ItemDetail = ({ detalle }) => {
 
@@ -11,9 +12,10 @@ const {addItem} = useContext (CartContext)
 
 const onAdd = (cantidad) => {
     setCompra(true)
-    console.log(`Compraste ${cantidad} del item ${detalle.name}`)
     addItem(detalle,cantidad)
+    toast.success('¡Producto añadido al carrito!');
 }
+
     return (
         <div>
             <h2>{detalle.name}</h2>

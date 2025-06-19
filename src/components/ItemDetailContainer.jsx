@@ -31,20 +31,7 @@ setInvalid(true)
         })
         .catch ((error)=> console.log(error))
         .finally(()=> setCargando(false))
-
-
     }, [])
-
-    // PROMESA
-    // useEffect(() => {
-    //     setCargando(true)
-
-    //     getOneProduct(itemId)
-    //         .then((response) => setDetalle(response))
-    //         .catch((error) => console.log(error))
-    //         .finally(() => setCargando(false))
-
-    // }, [])
 
 if (invalid){
     return (
