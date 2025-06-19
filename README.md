@@ -4,6 +4,8 @@
 
 Este proyecto fue desarrollado como parte de la cursada en **Coderhouse** para la carrera de **Desarrollador Web Full Stack**, específicamente en el módulo **React JS** (Comisión 73690).
 
+![image](https://github.com/user-attachments/assets/2915cd16-e08d-4dd4-85e0-de6971d3ca87)
+
 ---
 
 ## Descripción
