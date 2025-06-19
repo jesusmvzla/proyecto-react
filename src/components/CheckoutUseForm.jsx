@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { db } from '../service/firebase';
 import { useForm } from "react-hook-form"
 import toast from 'react-hot-toast';
+import "../css/app.css"
 
 const CheckoutUseForm = () => {
 
@@ -48,10 +49,9 @@ const CheckoutUseForm = () => {
                         <p>Nos comunicaremos a tu teléfono y correo para coordinar el envío o tu reserva</p>
                         <Link className='btn btn-dark' to="/"> Volver al inicio</Link>
                     </div>
-                    : <div>
+                    : <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center", margin: "10px" }}>
                         <h1>Completa tus datos</h1>
-                        <form style={{ display: "flex", flexDirection: "column", alignItems: "center" }} onSubmit={handleSubmit(finalizarCompra)}>
-
+                        <form className="form" onSubmit={handleSubmit(finalizarCompra)}>
                             <input className="form-control" placeholder="Nombre completo" type="text" name="name" {...register("name", { required: true, minLength: 3, })} />
                             {errors?.name?.type === "required" && <span style={{ color: "red" }}>¡Por favor, completa tu nombre!</span>}
                             {errors?.name?.type === "minLength" && <span style={{ color: "red" }}>Tu nombre debe tener al menos 3 caracteres</span>}
