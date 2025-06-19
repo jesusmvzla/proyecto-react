@@ -1,0 +1,128 @@
+.carrito-div {
+  text-decoration: "none";
+  border-style: solid;
+  border-radius: 20%;
+  padding: 0.2rem;
+  border-color: black;
+  color: brown;
+  font-weight: bold;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.verMas {
+  background-color: brown;
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.card-img-top {
+  max-height: 12rem;
+  width: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.card {
+  width: 20rem;
+  margin: 0.1rem;
+  background-color: #ebd9c0;
+}
+
+.card-body {
+  width: 20rem;
+  margin: 0.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card h5 {
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.detalleContenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detalleContenedor h2 {
+  font-weight: bold;
+}
+
+.detalleContenedor img {
+  height: 15rem;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.botoncount {
+  margin: 0.5rem;
+}
+
+.contador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textoNosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.Airsoft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.Airsoft img {
+height: 20rem;
+width: auto;
+margin: 1rem;
+}
+
+.greetingDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.greetingDiv h1 {
+align-self: center;
+margin: 5px;
+}
+
+.carritoVacio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer {
+  background-color: #660000;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+
+.redes li{
+  list-style-type: none;
+  margin: 5px;
+}
+
+.redBarFooter {
+  background-color: #1a0000;
+  height: 10px;
+}

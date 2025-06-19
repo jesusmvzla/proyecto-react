@@ -5,4 +5,14 @@
 
 .container {
     background-color: #ebd9c0;
+    max-width: 100%;
+}
+
+.redBar {
+    background-color: brown;
+    height: 10px;
+}
+
+.navFull {
+    background-color: #ebd9c0 ;
 }

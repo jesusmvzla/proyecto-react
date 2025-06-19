@@ -1,4 +1,4 @@
-import '../App.css'
+import '../css/App.css'
 import { BsFillCartFill } from "react-icons/bs";
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';

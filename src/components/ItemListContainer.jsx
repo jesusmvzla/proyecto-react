@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import LoaderComponent from "../components/LoaderComponent"
 import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../service/firebase";
+import "../css/app.css"
 
 const ItemListContainer = (props) => {
 
@@ -42,7 +43,7 @@ const ItemListContainer = (props) => {
             {
                 loading
                     ? <LoaderComponent />
-                    : <div>
+                    : <div className="greetingDiv">
                         <h1>{greeting}{categoryId && <span style={{ textTransform: "capitalize" }}> {categoryId}</span>}</h1>
                         <ItemList data={data} />
                     </div>

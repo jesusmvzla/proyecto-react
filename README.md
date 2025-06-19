@@ -12,17 +12,6 @@ Este proyecto fue desarrollado como parte de la cursada en **Coderhouse** para l
 
 ---
 
-## Características principales
-
-- Estructura basada en componentes reutilizables.
-- Navegación dinámica mediante React Router.
-- Gestión eficiente del estado con hooks.
-- Estilo modular y responsive.
-- Integración de ESLint para asegurar la calidad del código.
-- Preparado para futuras expansiones (soporte para TypeScript recomendado).
-
----
-
 ## Librerías utilizadas
 
 - [React Boostrap](https://react-bootstrap.netlify.app/docs/getting-started/introduction): utilizada para el styling de la app.
@@ -51,18 +40,7 @@ npm run dev
 
 ---
 ## Versión Host
-Si desea ver el proyecto en línea, puede ingresar en el siguiente enlace: [enlace]
----
-
-## Estructura del proyecto
-
-- `/src`
-- `/components` – Componentes reutilizables de la aplicación.
-- `/pages` – Vistas principales.
-- `/assets` – Recursos estáticos (imágenes, estilos).
-- `App.jsx` – Componente raíz.
-- `main.jsx` – Punto de entrada de la aplicación.
-
+Si desea ver el proyecto en línea, puede ingresar en el siguiente [enlace](https://proyecto-react-orcin.vercel.app/)
 ---
 
 ## Autor
@@ -73,4 +51,3 @@ Comunicador social corporativo, geek, gamer y estudiante de Desarrollo Full Stac
 **Junio de 2025**
 
 ---
-

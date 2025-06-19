@@ -1,4 +1,4 @@
-import './App.css'
+import './css/App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ItemListContainer from './components/ItemListContainer'
 import NavbarBootstrap from './components/NavbarBootstrap'
@@ -12,6 +12,7 @@ import Cart from './components/Cart'
 import { CartProvider } from './context/CartContext'
 import CheckoutUseForm from './components/CheckoutUseForm'
 import { Toaster, toast } from 'react-hot-toast'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -33,7 +34,9 @@ function App() {
       </CartProvider>
     </BrowserRouter>
     <Toaster position="top-right" />
+    <Footer/>
     </>
+    
   )
 }
 

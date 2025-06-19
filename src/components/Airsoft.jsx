@@ -1,8 +1,11 @@
 import React from 'react'
+import "../css/app.css"
 
 const Airsoft = () => {
     return (
-        <div>
+        <>
+        <div className='redBar'></div>
+        <div className='Airsoft'>
             <h2>¿Qué es el Airsoft?</h2>
             <br />
             <p><strong>Airsoft</strong> es mucho más que un juego: es una experiencia de simulación táctica que combina estrategia, trabajo en equipo y adrenalina pura.</p>
@@ -13,8 +16,8 @@ const Airsoft = () => {
 
             <p><strong>Bienvenido a un deporte donde la estrategia pesa más que la fuerza, y la emoción no se negocia.</strong></p>
             <img src="https://www.okgrancanaria.com/wp-content/uploads/2016/06/airsoft-hangar.jpg" alt="" />
-
         </div>
+        </>
     )
 }
 

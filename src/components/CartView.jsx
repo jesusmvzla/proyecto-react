@@ -5,6 +5,29 @@ import toast from 'react-hot-toast';
 
 const CartView = () => {
     const { cart, cartTotal, clear, removeItem } = useContext(CartContext)
+    const confirmarVaciarCarrito = () => {
+        toast((t) => (
+            <div>
+                <p>¿Seguro que deseas vaciar el carrito?</p>
+                <button
+                    onClick={() => toast.dismiss(t.id)}
+                    style={{ marginRight: '8px' }}
+                >
+                    Cancelar
+                </button>
+                <button
+                    onClick={() => {
+                        clear();
+                        toast.dismiss(t.id);
+                        toast.success('Carrito vacío');
+                    }}
+                    style={{ background: 'red', color: 'white' }}
+                >
+                    Confirmar
+                </button>
+            </div>
+        ));
+    };
 
     return (
         <div>
@@ -30,35 +53,12 @@ const CartView = () => {
             </div>
 
             <div style={{ width: "80%", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <button className='btn btn-danger' onClick={()=> confirmarVaciarCarrito()}>Vaciar carrito</button>
+                <button className='btn btn-danger' onClick={() => confirmarVaciarCarrito()}>Vaciar carrito</button>
                 <Link to="/checkout" className='btn btn-dark'>Terminar compra</Link>
             </div>
         </div>
+
     )
 }
-
-const confirmarVaciarCarrito = () => {
-    toast((t) => (
-        <div>
-            <p>¿Seguro que deseas vaciar el carrito?</p>
-            <button
-                onClick={() => toast.dismiss(t.id)}
-                style={{ marginRight: '8px' }}
-            >
-                Cancelar
-            </button>
-            <button
-                onClick={() => {
-                    clear();
-                    toast.dismiss(t.id);
-                    toast.success('Carrito vaciado');
-                }}
-                style={{ background: 'red', color: 'white' }}
-            >
-                Confirmar
-            </button>
-        </div>
-    ));
-};
 
 export default CartView

@@ -1,8 +1,9 @@
 import React from 'react'
+import "../css/app.css"
 
 const Nosotros = () => {
     return (
-        <div>
+        <div className='textoNosotros'>
             <h2>¡HIT Airsoft: el mejor lugar para jugar airsoft en Bogotá!</h2>
             <br />
             <h3>¿Listo para soltar adrenalina, estrategia y acción real?</h3>

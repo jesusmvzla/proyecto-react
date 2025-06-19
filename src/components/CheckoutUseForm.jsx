@@ -4,6 +4,7 @@ import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { Link } from 'react-router-dom';
 import { db } from '../service/firebase';
 import { useForm } from "react-hook-form"
+import toast from 'react-hot-toast';
 
 const CheckoutUseForm = () => {
 
@@ -31,6 +32,8 @@ const CheckoutUseForm = () => {
                 clear()
             })
             .catch((error) => console.log(error))
+
+        toast.success('¡Pedido realizado!');
     }
 
     return (
@@ -64,7 +67,7 @@ const CheckoutUseForm = () => {
                             {errors?.email2?.type === "required" && <span style={{ color: "red" }}>Confirma tu email</span>}
                             {errors?.email2?.type === "equalsMail" && <span style={{ color: "red" }}>Asegúrate de incluir el mismo email en ambas casillas</span>}
 
-                            <button className="btn btn-success" type='submit'> Finalizar compra</button>
+                            <button className="btn btn-success" type='submit' onClick={{}}> Finalizar compra</button>
                         </form>
                     </div>
             }

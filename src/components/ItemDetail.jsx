@@ -2,7 +2,8 @@ import React, {useContext, useState} from 'react'
 import ItemCount from './ItemCount'
 import { CartContext } from '../context/CartContext'
 import { Link } from 'react-router-dom'
-import toast, { Toaster } from 'react-hot-toast'
+import toast from 'react-hot-toast'
+import "../css/app.css";
 
 const ItemDetail = ({ detalle }) => {
 
@@ -17,7 +18,7 @@ const onAdd = (cantidad) => {
 }
 
     return (
-        <div>
+        <div className='detalleContenedor'>
             <h2>{detalle.name}</h2>
             <img src={detalle.img} alt={detalle.name} />
             <h3>{detalle.description}</h3>
