@@ -26,15 +26,13 @@ Este proyecto fue desarrollado como parte de la cursada en **Coderhouse** para l
 
 ## Instalación y uso
 
-1. **Clona el repositorio:**
+1. **Clona el repositorio**
 git clone https://github.com/jesusmvzla/proyecto-react.git
 cd proyecto-react
 
-2. **Instala las dependencias:**
-npm install
+2. **Instala las dependencias**
 
-3. **Inicia el servidor de desarrollo:**
-npm run dev
+3. **Inicia el servidor de desarrollo**
 
 4. Abre tu navegador en `http://localhost:5173` para ver la aplicación en funcionamiento.
 
